@@ -1,0 +1,79 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminLogin.master.cs" Inherits="hospitalWebsite.AdminLogin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+     <style>
+        body{
+            background-color:chartreuse;
+        }
+        #xyz{
+            background-color:aqua;
+            color:black;
+            text-align=center;
+        }
+        .sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+
+.sidebar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+        .auto-style1 {
+            margin-left: 498px;
+        }
+    </style>
+</head>
+<body>
+   <form id="form1" runat="server">
+        <div>
+           
+                 <h1 id="xyz">Welcome to Admin DaskBord</h1>
+   <div class="sidebar">
+  <a class="active" href="">Home</a>
+  <a href="pdata.aspx">Patient Data</a>
+  <a href="vaccine.aspx">Doctor Data</a>
+  <a href="datadoctor.aspx">Vaccine Data</a>
+ <a href="datapatient.aspx">Patient Data</a>
+       <a href="updatedoctor.aspx">Updated Doctor Data</a>
+</div>
+             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+          
+        </div>
+    </form>
+</body>
+</html>
